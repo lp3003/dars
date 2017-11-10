@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="bootstrap-3.3.2-dist/css/bootstrap.css">
+		<script type="text/javascript">
+			function onShart1(){
+				function begin1(a){
+					return 4*a;
+				}
+				var a=+prompt("сторона квадрата a","");
+				alert(begin1(a)+" периметр квадрата");
+			}
+			function onShart2(){
+				function begin2(a){
+					return a*a;
+				}
+				var a=+prompt("сторона квадрата a","");
+				alert(begin2(a)+"площадь квадрата");
+			}
+			function onShart3(){
+				function begin3(a, b){
+					return a*b;														
+				}
+				function podbeg(a, b){
+					return 2*(a+b);
+				} 
+				var a=+prompt("сторона прямоугольника a","");
+				var b=+prompt("сторона прямоугольника b","");
+				alert(begin3(a, b)+"-площадь S, "+podbeg(a, b)+"-периметр P");
+			}
+			function onShart4(){
+				function begin4(d){
+					return 3.14*d;
+				}
+				var d=+prompt("диаметр окружности","");
+				alert(begin4(d)+" длина L");
+			}
+			function onShart5(){
+				// function begin5(a){
+				// 	var v=a*a*a;
+				// 	var s=6*a*a;
+				// 	return {v: v, s: s}				
+				// }
+				// var a=+prompt("длина ребра куба a","");
+				// console.log(begin5(a));
+//--------------------------------------------------------------------				
+				function begin5(a){
+					return a*a*a;
+				}
+				function podbeg(a){
+					return 6*a*a;
+				}
+				var a=+prompt("длина ребра куба a","");
+				alert(begin5(a)+"-объем куба V, "+podbeg(a)+"-площадь его поверхности S");
+			}
+			function onShart6(){
+				function begin6(a, b, c){
+					return a*b*c;
+				}
+				function podbeg(a, b, c){
+					return 2*(a*b+b*c+a*c);
+				}
+				var a=+prompt("длина ребра a","");
+				var b=+prompt("длина ребра b","");
+				var c=+prompt("длина ребра c","");
+				alert(begin6(a, b, c)+"-объем V, "+podbeg(a, b, c)+"-площадь поверхности S")
+			}
+			function onShart7(){
+				function begin7(r){
+					return 2*Math.PI*r;
+				}
+				function podbeg(r){
+					return Math.PI*r*r;
+				}
+				var r=+prompt("заданний радиус R","");
+				alert(begin7(r)+"-длина окружности L, "+podbeg(r)+"-площадь круга S")
+			}
+			function onShart8(){
+				function begin8(a, b){
+					return (a+b)/2;
+				}
+				var a=+prompt("a","");
+				var b=+prompt("b","");
+				alert(begin8(a, b)+" среднее арифметическое");
+			}
+			function onShart9(){
+			// 	function begin9(a, b){
+			// 		return Math.sqrt(a*b);
+			// 	}
+			// 	var qw=+prompt("a","");
+			// 	var wq=+prompt("b","");
+			// 	alert(begin9(qw, wq));
+			// 
+//----------------------------------------------
+				function begin9(a, b){
+					if(a<0||b<0){
+						return "ввод только выше 0"
+					}
+					return Math.sqrt(a*b);
+				}
+				var qw=+prompt("a","");
+				var wq=+prompt("b","");
+				alert(begin9(qw, wq));	
+			}			
+			function onShart12(){
+				function begin12(a, b){
+					return c=Math.sqrt(a*a+b*b);
+				}
+				function podbeg(a, b){
+					return a+b+c;
+				}
+				var qw=+prompt("катеты прямоугольного треугольника a","");
+				var wq=+prompt("катеты прямоугольного треугольника b","");
+				alert(begin12(qw, wq)+"-гипотенузa C "+podbeg(qw, wq)+"-периметр P");
+			}
+			function onShart13(){
+				// function begin13(r){	
+				// 	return s=3.14*(r*r);					
+				// }
+				// function podbeg(f){
+				// 	return d=3.14*(f*f);
+				// }
+				// function begpod(){
+				// 	if(d>s){
+				// 		return "R>R2"
+				// 	}
+				// 	return s-d;
+				// }
+				// var qw=+prompt("радиус R1","");
+				// var wq=+prompt("радиус R2","");
+				// alert(begin13(qw)+"-площадь круга S1, "+podbeg(wq)+"-площадь круга S2, "+begpod()+"-площадь кольца S3");
+//------------------------------------------------------------						
+				function begin13(r){						
+					return 3.14*(r*r);					
+				}				
+				function begpod(){	
+					if(wq>qw){
+						return "R>R2"
+					}				
+					return begin13(qw)-begin13(wq);
+				}
+				var qw=+prompt("радиус R1","");
+				var wq=+prompt("радиус R2","");
+				alert(begin13(qw)+"-площадь круга S1, "+begin13(wq)+"-площадь круга S2, "+begpod()+"-площадь кольца S3");
+			}
+			function onShart14(){
+				function begin14(l){
+					return r=l/(2*3.14);
+				}
+				function podbeg(s){
+					return 3.14*r*r;
+				}
+				var wq=+prompt("длина окружности L","");
+				alert(begin14(wq)+"-радиус R, "+podbeg(wq)+"-площадь круга S");
+			}
+			function onShart15(){
+				function begin15(s){
+					return d=2*Math.sqrt(s/3.14);
+				}
+				function podbeg(l){
+					return 3.14*d;
+				}
+				var wq=+prompt("площадь S","");
+				alert("диаметр D-"+begin15(wq)+", длину L-"+podbeg(wq));
+			}
+			function onShart16(){
+				function begin16(a, b){
+					return Math.abs(b-a);
+				}
+				var wq=+prompt("a","");
+				var qw=+prompt("b","");
+				alert(begin16(wq, qw));
+			}
+			function onShart17(){
+				function begin17(a, c){
+					return Math.abs(a-c);
+				}					
+				function begpod(){
+					return begin17(wq, ww)+begin17(qw, ww);
+				}
+				var wq=+prompt("a","");
+				var qw=+prompt("b","");
+				var ww=+prompt("c","");
+				alert("длина отрезков AC-"+begin17(wq, ww)+", длина отрезков BC-"+begin17(qw, ww)+", их сумма-"+begpod());
+			}
+			function onShart18(){
+				function begin18(a, c, b){
+					if(a<c && c<b){
+						return "ввод только от A до B";
+					}
+					return Math.abs(a-c);
+				}
+				function begpod(){
+					return begin18(wq, qw, ww)*begin18(qw, ww);
+				}
+				var wq=+prompt("a","");
+				var qw=+prompt("b","");
+				var ww=+prompt("c","");
+				alert("длина отрезков AC-"+begin18(wq, qw, ww)+", длина отрезков BC-"+begin18(qw, ww)+", произведение длин отрезков AC и BC-"+begpod());
+			}
+			function onShart19(){
+				function abs(x, y){
+					return Math.abs(x-y);
+				}				
+				function findArea(we, wq, ew, qw){
+					return abs(we, wq)*abs(ew, qw);
+				}
+				function findPerimetr(we, wq, ew, qw){
+					return (abs(we, wq)+abs(ew, qw))*2
+				}
+				var x1=+prompt("x1","");
+				var y1=+prompt("y1","");
+				var x2=+prompt("x2","");
+				var y2=+prompt("y2","");
+				alert("S-площадь-"+findArea(x1, y1, x2, y2)+", P-периметр-"+findPerimetr(x1, y1, x2, y2));
+			}
+			function onShart20(){
+				function spacing(x, y){
+					return Math.abs(x-y);
+				}
+				function square(we, wq, ew, qw){
+					return Math.sqrt(spacing(ew, we)*spacing(ew, we)+spacing(qw, wq)*spacing(qw, wq));
+				}
+				var x1=+prompt("x1","");
+				var y1=+prompt("y1","");
+				var x2=+prompt("x2","");
+				var y2=+prompt("y2","");
+				alert("расстояние между x1,y1-x2,y2 - "+square(x1, y1, x2, y2));
+			}
+			function onShart21(){
+				function findDistance(x1,y1,x2,y2){
+					var a = Math.abs(x2 - x1);
+					var b = Math.abs(y2 - y1);
+					return Math.sqrt(a * a + b * b);
+				}
+				function findPerimetr(x1,y1,x2,y2,x3,y3){
+					var a = findDistance(x1, y1, x2, y2);	
+					var b = findDistance(x1, y1, x3, y3);
+					var c = findDistance(x2, y2, x3, y3);	
+					var hp = (a + b + c)/2;
+					return Math.sqrt(hp * (hp - a) * (hp - b) * (hp - c));
+				}
+				var x1=+prompt("x1","");
+				var y1=+prompt("y1","");
+				var x2=+prompt("x2","");
+				var y2=+prompt("y2","");
+				var x3=+prompt("x3","");
+				var y3=+prompt("y3","");
+				alert(findPerimetr(x1,y1,x2,y2,x3,y3));
+			}
+
+
+
+			
+
+
+
+
+
+			function onShart74(){
+				function nameAge(age, name){	
+					var myAge=28;
+					if(age<myAge){
+						return name + ", Уко";
+					}else if(age==myAge){
+						return name + ", Ошно";
+					}
+					return name + ", Ако";
+				}
+				var name=prompt("ваше имя?","");
+				var age=+prompt("сколько вам лет?","");
+				alert(nameAge(age, name))
+			}
+			function onShart75(){
+				function test(a, b){
+					var result="";
+					for (; a <= b; a++){
+						if (a % 2 == 0){	
+							result+=a+",";	
+						}										
+					}
+					return result;
+				}
+				var wq = +prompt("a","");
+				var qw = +prompt("b","")
+				alert(test(wq, qw));
+			}
+
+
+		</script>
+	<title>begins</title>
+	</head>	   
+	<body>
+		<br>
+		<br>
+		<br>
+		<div>
+			<button class="btn btn-primary" onclick="onShart1()">Begin1</button>
+			<button class="btn btn-success" onclick="onShart2()">Begin2</button>
+			<button class="btn btn-info" onclick="onShart3()">Begin3</button>
+			<button class="btn btn-warning" onclick="onShart4()">Begin4</button>
+			<button class="btn btn-danger" onclick="onShart5()">Begin5</button>
+			<button class="btn btn-default" onclick="onShart6()">Begin6</button>
+			<button class="btn btn-primary" onclick="onShart7()">Begin7</button>
+			<button class="btn btn-success" onclick="onShart8()">Begin8</button>
+			<button class="btn btn-info" onclick="onShart9()">Begin9</button>
+			<!-- <button class="btn btn-warning" onclick="onShart10()">Begin10</button>
+			<button class="btn btn-danger" onclick="onShart11()">Begin11</button> -->
+			<button class="btn btn-black" onclick="onShart12()">Begin12</button>
+			<button class="btn btn-primary" onclick="onShart13()">Begin13</button>
+		</div>
+		<hr>
+		<div>
+			<button class="btn btn-default" onclick="onShart14()">Begin14</button>
+			<button class="btn btn-primary" onclick="onShart15()">Begin15</button>
+			<button class="btn btn-success" onclick="onShart16()">Begin16</button>
+			<button class="btn btn-info" onclick="onShart17()">Begin17</button>
+			<button class="btn btn-warning" onclick="onShart18()">Begin18</button>
+			<button class="btn btn-danger" onclick="onShart19()">Begin19</button>
+			<button class="btn btn-default" onclick="onShart20()">Begin20</button>
+			<button class="btn btn-primary" onclick="onShart21()">Begin21</button>
+			<button class="btn btn-success" onclick="onShart22()">Begin22</button>
+			<button class="btn btn-info" onclick="onShart23()">Begin23</button>
+			<button class="btn btn-warning" onclick="onShart24()">Begin24</button>
+			<button class="btn btn-danger" onclick="onShart25()">Begin25</button>
+		</div>
+		<hr>
+		<!-- <div>
+			<button class="btn btn-black" onclick="onShart26()">Shart26</button>
+			<button class="btn btn-warning" onclick="onShart27()">Shart27</button>
+			<button class="btn btn-default" onclick="onShart28()">Shart28</button>
+			<button class="btn btn-primary" onclick="onShart29()">Shart29</button>
+			<button class="btn btn-success" onclick="onShart30()">Shart30</button>
+			<button class="btn btn-info" onclick="onShart31()">Shart31</button>
+			<button class="btn btn-warning" onclick="onShart32()">Shart32</button>
+			<button class="btn btn-danger" onclick="onShart33()">Shart33</button>
+			<button class="btn btn-default" onclick="onShart34()">Shart34</button>
+			<button class="btn btn-primary" onclick="onShart35()">Shart35</button>
+			<button class="btn btn-success" onclick="onShart36()">Shart36</button>
+			<button class="btn btn-info" onclick="onShart37()">Shart37</button>
+		</div> -->
+<!-- 		<hr>
+		<div>
+			<button class="btn btn-warning" onclick="onShart38()">Shart38</button>
+			<button class="btn btn-danger" onclick="onShart39()">Shart39</button>
+			<button class="btn btn-black" onclick="onShart40()">Shart40</button>
+			<button class="btn btn-primary" onclick="onShart41()">ощибка1</button>
+			<button class="btn btn-default" onclick="onShart42()">оригинал</button>
+			<button class="btn btn-primary" onclick="onShart43()">Shart43</button>
+			<button class="btn btn-success" onclick="onShart44()">Shart44</button>
+			<button class="btn btn-info" onclick="onShart45()">Shart45</button>
+			<button class="btn btn-warning" onclick="onShart46()">Shart46</button>
+			<button class="btn btn-danger" onclick="onShart47()">Shart47</button>
+			<button class="btn btn-black" onclick="onShart48()">Shart48</button>
+			<button class="btn btn-primary" onclick="onShart49()">Shart49</button>
+		</div>
+		<hr>
+		<div>
+			<button class="btn btn-default" onclick="onShart50()">Shart51</button>
+			<button class="btn btn-primary" onclick="onShart51()">Shart52</button>
+			<button class="btn btn-success" onclick="onShart52()">Shart52</button>
+			<button class="btn btn-info" onclick="onShart53()">Shart53</button>
+			<button class="btn btn-warning" onclick="onShart54()">Shart54</button>
+			<button class="btn btn-danger" onclick="onShart55()">Shart55</button>
+			<button class="btn btn-black" onclick="onShart56()">Shart56</button>
+			<button class="btn btn-primary" onclick="onShart57()">Shart57</button>
+			<button class="btn btn-default" onclick="onShart58()">Shart58</button>
+			<button class="btn btn-primary" onclick="onShart59()">Shart59</button>
+			<button class="btn btn-success" onclick="onShart60()">Shart60</button>
+			<button class="btn btn-info" onclick="onShart61()">Shart61</button>
+		</div>
+		<hr>
+		<div>
+			<button class="btn btn-warning" onclick="onShart62()">Shart62</button>
+			<button class="btn btn-danger" onclick="onShart63()">Shart63</button>
+			<button class="btn btn-black" onclick="onShart64()">Shart64</button>
+			<button class="btn btn-primary" onclick="onShart65()">Shart65</button>
+			<button class="btn btn-default" onclick="onShart66()">Shart66</button>
+			<button class="btn btn-primary" onclick="onShart67()">Shart67</button>
+			<button class="btn btn-success" onclick="onShart68()">Shart68</button>
+			<button class="btn btn-info" onclick="onShart69()">Shart69</button>
+			<button class="btn btn-warning" onclick="onShart70()">Shart70</button>
+			<button class="btn btn-danger" onclick="onShart71()">Shart71</button>
+			<button class="btn btn-black" onclick="onShart72()">Shart72</button>
+			<button class="btn btn-primary" onclick="onShart73()">Shart73</button>
+		</div>
+		<hr> -->
+		<div>			
+			<button class="btn btn-default" onclick="onShart74()">Shart74</button>
+			<button class="btn btn-primary" onclick="onShart75()">Shart75</button>
+			<button class="btn btn-success" onclick="onShart76()">Shart76</button>
+			<button class="btn btn-info" onclick="onShart77()">Shart77</button>
+		</div>   
+	</body>
+</html>
